@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 
-# https://stackoverflow.com/questions/12662676/writing-a-gimp-python-script
-# https://www.gimp.org/docs/python/index.html#INTRODUCTION
-# https://tanyaschlusser.github.io/slides/Python-Fu-in-GIMP.slides.html
-# <span>Photo by <a href="https://unsplash.com/@baileyzindel?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Bailey Zindel</a> on <a href="https://unsplash.com/s/photos/landscape?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-# <span>Photo by <a href="https://unsplash.com/@sharonmccutcheon?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sharon McCutcheon</a> on <a href="https://unsplash.com/s/photos/money?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+"""
+Thumbnail Generator
+This script in intended to be executed by GIMP as a plug-in to generate an image to be used as thumbnail.
+Feel free to edit it to fit your needs.
+Author: Yuri Delgado (yuridelgado.dev)
+"""
 from gimpfu import *
 import os
 import utils as my
@@ -70,11 +71,11 @@ register(
     "Thumbnail Generator",
     "",     
     [
-        (PF_STRING, 'background_path', '* Background path', '/home/yuridelgado/Pictures/landscape.jpg'),
-        (PF_STRING, 'picture_path', 'Picture path', '/home/yuridelgado/Pictures/travel-guy.png'),
-        (PF_STRING, 'first_line', 'First line (short)', 'BEST'),
-        (PF_STRING, 'second_line', 'Second line', 'LAKES TO VISIT'),
-        (PF_STRING, 'third_line', 'Third line', 'IN SOUTH AMERICA'),
+        (PF_STRING, 'background_path', '* Background path', ''),
+        (PF_STRING, 'picture_path', 'Picture path', ''),
+        (PF_STRING, 'first_line', 'First line (short)', ''),
+        (PF_STRING, 'second_line', 'Second line', ''),
+        (PF_STRING, 'third_line', 'Third line', ''),
         (PF_FONT, 'font_face', '* Font face', 'Londrina Solid Heavy'),
         (PF_COLOR, "color", "Color", (0.0, 0.0, 0.0))
     ],
